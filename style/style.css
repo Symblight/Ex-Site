@@ -1,0 +1,179 @@
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul{
+	list-style: none;
+}
+
+body{
+	font-family: sans-serif;
+	height: 100%;
+}
+
+
+.container{
+	width: 100%;
+	background-color: #EEEEEE;
+	display: flex;
+  flex-direction: column;
+  height: 100%;
+ }
+
+.main_layout{
+	margin: 0 auto;
+	width: 1200px;
+	 flex: 1 0 auto;
+}
+
+#header_menu{
+	position: fixed;
+	background-color: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.25);
+	height: 42px;
+	width: 100%;
+}
+
+#header_content{
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.bl{
+	background-color: #fff;
+	padding: 15px;
+}
+
+#primary_menu{
+	position: relative;
+}
+
+.bl_logo{
+	background-color: orange;
+	float: left;
+	line-height: 42px;
+	height: 42px;
+	padding: 0 15px;
+}
+
+#primary_menu>ul>li{
+	display: inline-block;
+	list-style: none;
+	margin-right: 20px;
+}
+
+#primary_menu>ul>li:last-child{
+	margin-right: 0px;
+}
+
+#primary_menu>ul>li a{
+	display: inline-block;
+	line-height: 42px;
+	height: 42px;
+	padding: 0 15px;
+	position: relative;
+	z-index: 999;
+}
+
+#primary_menu>ul>li a:hover{
+	color: #000;
+}
+
+#primary_menu>ul>li a::before{
+	content: "";
+	width: 100%;
+	position: absolute;
+	height: 42px;
+	background-color: #FFECB3;
+	z-index: -1;
+	opacity: 0;
+}
+
+#primary_menu>ul>li a:hover:before{
+	opacity: 1;
+}
+
+.content{
+ margin: 15px; 
+ width: 100px;
+ height: 200px;
+ float: left;
+}
+
+.sidebar{
+margin: 15px; 
+width: 800px;
+float: left;
+}
+
+.wall_post{
+	width: 600px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.note_field{
+    line-height: 1.462;
+    word-wrap: break-word;
+    
+    border: 0;
+    overflow: hidden;
+}
+
+.note_field:focus{
+	outline: none;
+}
+
+.placeholder {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    z-index: 5;
+    cursor: text;
+    pointer-events: none;
+}
+
+.ph_content{
+	 color: #828282;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+    padding: 1px;
+    opacity: 1;
+    -webkit-filter: none;
+    filter: none;
+}
+
+.note_border{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E0E0E0;
+}
+
+.panel_note{
+margin-top: 15px;
+text-align: right;
+}
+
+.button_text{
+	padding: 5px;
+}
+
+.foot_layout{
+	height: 200px;
+	width: 100%;
+	background-color: #212121;
+	color: #F5F5F5;
+	flex: 0 0 auto;
+}
