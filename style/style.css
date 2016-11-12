@@ -17,7 +17,7 @@ ul{
 }
 
 body{
-	font-family: sans-serif;
+	font-family: Arial, sans-serif;
 	height: 100%;
 }
 
@@ -26,21 +26,21 @@ body{
 	width: 100%;
 	background-color: #EEEEEE;
 	display: flex;
-  flex-direction: column;
-  height: 100%;
+  	flex-direction: column;
+  	height: 100%;
  }
 
 .main_layout{
 	margin: 0 auto;
-	width: 1200px;
-	 flex: 1 0 auto;
+	width: 1000px;
+	flex: 1 0 auto;
 }
 
 #header_menu{
 	position: fixed;
 	background-color: #fff;
 	box-shadow: 0 0 2px rgba(0,0,0,.25);
-	height: 42px;
+	height: 52px;
 	width: 100%;
 	z-index: 3;
 }
@@ -62,8 +62,8 @@ body{
 .bl_logo{
 	background-color: orange;
 	float: left;
-	line-height: 42px;
-	height: 42px;
+	line-height: 52px;
+	height: 52px;
 	padding: 0 15px;
 }
 
@@ -77,30 +77,31 @@ body{
 	margin-right: 0px;
 }
 
-#primary_menu>ul>li a{
+#primary_menu>ul>li>a{
 	display: inline-block;
-	line-height: 42px;
-	height: 42px;
+	line-height: 52px;
+	height: 52px;
 	padding: 0 15px;
 	position: relative;
-	z-index: 999;
 }
 
 #primary_menu>ul>li a:hover{
 	color: #000;
 }
 
-#primary_menu>ul>li a::before{
+#primary_menu>ul>li>a::before{
 	content: "";
+	display: block;
 	width: 100%;
 	position: absolute;
-	height: 42px;
-	background-color: #FFECB3;
+	left: 0;
+	height: 6px;
+	background-color: #01579B;
 	z-index: -1;
 	opacity: 0;
 }
 
-#primary_menu>ul>li a:hover:before{
+#primary_menu>ul>li>a:hover:before{
 	opacity: 1;
 }
 
@@ -177,4 +178,9 @@ text-align: right;
 	background-color: #212121;
 	color: #F5F5F5;
 	flex: 0 0 auto;
+}
+.footer_menu{
+	margin: 0 auto;
+	width: 600px;
+	padding: 15px;
 }
