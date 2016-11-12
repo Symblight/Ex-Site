@@ -17,16 +17,34 @@ ul{
 }
 
 body{
-	font-family: Arial, sans-serif;
-		background-color: #EEEEEE;
+	font-family: 'Roboto-Light', sans-serif;
 }
 
+header{
+	font-family: 'Roboto-Black', sans-serif;
+}
 
+@font-face {
+  font-family: Roboto-Light; /* Имя шрифта */
+   src: url(fonts/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
+   rc: url(fonts/Roboto-Black.ttf); 
+ }
+
+.t-body {
+    margin: 0px;
+}
+
+.layout{
+	-webkit-font-smoothing: antialiased;
+	background-color: #000;
+ 	background-size: 100%;
+ 	height: 100%
+}
 .container{
 	width: 100%;
 	display: flex;
   	flex-direction: column;
-  	height: 100%;
+
  }
 
 .main_layout{
@@ -37,20 +55,21 @@ body{
 
 #header_menu{
 	position: fixed;
-	background-color: #fff;
+	background-color: #000;
 	box-shadow: 0 0 2px rgba(0,0,0,.25);
 	height: 52px;
 	width: 100%;
 	z-index: 3;
+	color: #fff;
 }
 
 #header_content{
-	max-width: 980px;
+	width: 400px;
 	margin: 0 auto;
 }
 
 .bl{
-	background-color: #fff;
+	color: #fff;
 	padding: 15px;
 }
 
@@ -82,11 +101,10 @@ body{
 	height: 52px;
 	padding: 0 15px;
 	position: relative;
-	color: #424242;
+		color: #fff;
 }
 
 #primary_menu>ul>li a:hover{
-	color: #000;
 }
 
 #primary_menu>ul>li>a::before{
@@ -95,7 +113,8 @@ body{
 	width: 100%;
 	position: absolute;
 	left: 0;
-	height: 6px;
+	top: 95%;
+	height: 3px;
 	background-color: #03A9F4;
 	z-index: -1;
 	opacity: 0;
@@ -105,6 +124,33 @@ body{
 	opacity: 1;
 }
 
+.view-coverphoto{
+
+}
+
+.coverphoto{
+	height: 120px;
+    width: 100%;
+    padding-top: 130px;
+    background-size: 100%;
+    background-attachment: scroll;
+    background-position: 50% 50%;
+    position: relative;
+}
+
+.coverphoto-gradient{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: -moz-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,1));
+background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,1));
+background-image: -o-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,1));
+background-image: -ms-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,1));
+background-image: linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,1));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fe000000', endColorstr='#00000000');
+}
 .content{
  margin: 15px; 
  width: 100px;
@@ -112,10 +158,19 @@ body{
  float: left;
 }
 
+.About-info{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+.myself{
+	font-size: 32px;
+	font-family: Roboto;
+}
 .sidebar{
-margin: 15px; 
-width: 800px;
-float: left;
+margin: 15px auto; 
+width: 600px;
 }
 
 .wall_post{
@@ -127,7 +182,6 @@ float: left;
 .note_field{
     line-height: 1.462;
     word-wrap: break-word;
-    
     border: 0;
     overflow: hidden;
 }
@@ -173,10 +227,9 @@ text-align: right;
 }
 
 .foot_layout{
-	height: 200px;
+	height: 250px;
 	width: 100%;
-	background-color: #EEEEEE;
-	color: #424242;
+	color: #fff;
 	flex: 0 0 auto;
 }
 
@@ -184,7 +237,6 @@ text-align: right;
 	margin: 0 auto;
 	width: 1000px;
 	padding-top: 25px;
-
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #BDBDBD;
